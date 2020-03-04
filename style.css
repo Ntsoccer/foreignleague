@@ -78,6 +78,7 @@
         padding: 16px 16px 700px 0px;
         width: calc(40%);
         margin-left: 80px;
+        margin-bottom: 50px;
     }
     .card-item:nth-child(2n){
         margin-right: 0;
