@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>海外リーグ</title>
+    <title>欧州リーグ</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -13,11 +13,12 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
 </head>
+<body>
 <section id="header">
     <div class="inner">
     <div class="header">
         <div class="header-left">
-            <h3>海外リーグ</h3>
+            <h3>欧州リーグ</h3>
         </div>
         <div class="header-nav">
             <ul>
@@ -163,6 +164,26 @@
     </div>
 </section>
 
-<body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    jQuery(function() {
+var pagetop = $('#page_top');   
+pagetop.hide();
+$(window).scroll(function () {
+   if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+       pagetop.fadeIn();
+   } else {
+       pagetop.fadeOut();
+   }
+});
+pagetop.click(function () {
+   $('body,html').animate({
+       scrollTop: 0
+   }, 500); //0.5秒かけてトップへ移動
+   return false;
+});
+});
+</script>
+
 </body>
 </html>
